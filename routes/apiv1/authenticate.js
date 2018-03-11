@@ -31,8 +31,8 @@ router.post('/',
 				user.comparePassword(password,function(err, isMatch){
 					if (err) return console.log('Authentication error');
 					if (!isMatch) return next(CustomError(res.__('INVALID_CREDENTIALS'),401));	
-					jwt.sign({user_id: user._id}, process.env.JWT_SECRET,{
-						expiresIn: process.env.JWT_EXPIRES_IN
+					jwt.sign({user_id: user._id}, process.env.SECRET,{
+						expiresIn: '2d'
 					}, (err, token) => {
 						if (err) return next(err);
 						res.json({ success: true, token: token });

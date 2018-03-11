@@ -41,7 +41,7 @@ npm run deletedb
 
 ###En primer lugar necesitas crear un usuario, en postman, selecciona POST introduce la siguiente ruta
 
-*http://localhost:3000/apiv1/authenticate
+*http://localhost:3000/apiv1/authenticate/new
 
 En esta ruta, selecciona body,  -www-form-urlencoded e introduce tres keys: name, email y password asi como sus values, por ejemplo pepitogrillo como name, pepito@example.com  como email y 12345 para la password. 
 
